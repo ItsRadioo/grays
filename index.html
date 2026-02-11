@@ -6,6 +6,9 @@
 
 <title>Apple Day | 1st Sault Ste. Marie Scouts</title>
 
+<!-- Netlify Identity -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 <style>
 
 /* RESET */
@@ -65,7 +68,7 @@ header{
   gap:14px;
 }
 
-.brand img{ height:125px; } /* Scouts logo */
+.brand img{ height:125px; }
 
 .brand-text{
   display:flex;
@@ -82,7 +85,7 @@ header{
   gap:15px;
 }
 
-.council-logo{ height:100px; } /* Council crest */
+.council-logo{ height:100px; }
 
 .donate-btn{
   background:var(--gold);
@@ -234,7 +237,7 @@ header{
   border-radius:var(--radius);
 }
 
-/* FORM – STACKED */
+/* FORM */
 .contact-form{
   margin-top:15px;
   display:flex;
@@ -453,18 +456,19 @@ Send us a message below.
 <footer>
 <p>© 1st Sault Ste. Marie Scouts | Apple Day Fundraiser</p>
 </footer>
+
+<!-- Identity Redirect -->
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
 </script>
 
 </body>
 </html>
-
