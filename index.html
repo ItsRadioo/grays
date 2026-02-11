@@ -453,6 +453,18 @@ Send us a message below.
 <footer>
 <p>© 1st Sault Ste. Marie Scouts | Apple Day Fundraiser</p>
 </footer>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
+
