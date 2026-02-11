@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "appleday"
+    label: "Apple Day Info"
+    file: "content/appleday.json"
+    format: "json"
+    fields:
+      - { label: "Locations", name: "locations", widget: "list" }
+      - { label: "Apple Types", name: "apples", widget: "list" }
+      - { label: "Suppliers", name: "suppliers", widget: "list" }
