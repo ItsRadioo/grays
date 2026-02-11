@@ -3,15 +3,26 @@ backend:
   repo: ItsRadioo/apple-day-site
   branch: main
 
+publish_mode: simple
+
 media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "appleday"
-    label: "Apple Day Info"
-    file: "content/appleday.json"
-    format: "json"
-    fields:
-      - { label: "Locations", name: "locations", widget: "list" }
-      - { label: "Apple Types", name: "apples", widget: "list" }
-      - { label: "Suppliers", name: "suppliers", widget: "list" }
+  - name: appleday
+    label: Apple Day Info
+    files:
+      - name: main
+        label: Main Info
+        file: content/appleday.json
+        fields:
+          - label: Locations
+            name: locations
+            widget: list
+          - label: Apple Types
+            name: apples
+            widget: list
+          - label: Suppliers
+            name: suppliers
+            widget: list
+
