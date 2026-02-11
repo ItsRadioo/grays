@@ -6,9 +6,6 @@
 
 <title>Apple Day | 1st Sault Ste. Marie Scouts</title>
 
-<!-- Netlify Identity -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
 <style>
 
 /* RESET */
@@ -45,7 +42,7 @@ a{ text-decoration:none; color:inherit; }
 
 section{ padding:60px 0; }
 
-h1,h2{ margin-bottom:12px; }
+h1,h2,h3{ margin-bottom:12px; }
 
 /* HEADER */
 header{
@@ -69,11 +66,6 @@ header{
 }
 
 .brand img{ height:125px; }
-
-.brand-text{
-  display:flex;
-  flex-direction:column;
-}
 
 .brand-text strong{
   font-size:22px;
@@ -112,32 +104,8 @@ header{
 
 .hero p{
   max-width:760px;
-  margin:12px auto 0;
+  margin:auto;
   font-size:18px;
-}
-
-.hero-buttons{
-  margin-top:28px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:13px 26px;
-  border-radius:8px;
-  font-weight:800;
-}
-
-.btn-primary{
-  background:var(--gold);
-  color:#000;
-}
-
-.btn-outline{
-  border:2px solid #fff;
-  color:#fff;
 }
 
 /* DONATIONS */
@@ -175,7 +143,6 @@ header{
   font-size:30px;
   font-weight:900;
   color:var(--red);
-  margin-bottom:10px;
 }
 
 .donation-card a{
@@ -185,17 +152,10 @@ header{
   padding:10px;
   border-radius:8px;
   font-weight:800;
-}
-
-.donation-card p{
-  font-size:12px;
-  margin-top:8px;
-  opacity:0.8;
+  margin-top:10px;
 }
 
 /* SECTIONS */
-.sections{ background:#fff; }
-
 .section-list{
   max-width:760px;
   margin:auto;
@@ -212,20 +172,18 @@ header{
   font-weight:700;
 }
 
-/* JOIN BUTTON */
-.join-wrap{
-  text-align:center;
-  margin-top:25px;
+/* DYNAMIC INFO */
+.dynamic-box{
+  max-width:760px;
+  margin:40px auto 0;
+  background:#fff;
+  padding:25px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
-.join-btn{
-  display:inline-block;
-  background:var(--red);
-  color:#fff;
-  padding:14px 26px;
-  border-radius:10px;
-  font-weight:900;
-  font-size:16px;
+.dynamic-box ul{
+  margin:10px 0 20px 20px;
 }
 
 /* CONTACT */
@@ -237,9 +195,7 @@ header{
   border-radius:var(--radius);
 }
 
-/* FORM */
 .contact-form{
-  margin-top:15px;
   display:flex;
   flex-direction:column;
   gap:12px;
@@ -247,16 +203,9 @@ header{
 
 .contact-form input,
 .contact-form textarea{
-  width:100%;
   padding:12px;
   border-radius:6px;
   border:1px solid #ccc;
-  font-size:16px;
-}
-
-.contact-form textarea{
-  min-height:120px;
-  resize:vertical;
 }
 
 .contact-form button{
@@ -300,7 +249,7 @@ footer{
 <div class="container nav">
 
   <div class="brand">
-    <img src="logo.png" alt="Scouts Canada Logo">
+    <img src="logo.png">
     <div class="brand-text">
       <strong>1st Sault Ste. Marie</strong>
       <span>Apple Day Fundraiser</span>
@@ -308,8 +257,8 @@ footer{
   </div>
 
   <div class="header-right">
-    <img src="council.png" class="council-logo" alt="Northern Ontario Council">
-    <a href="#" class="donate-btn">Donate</a>
+    <img src="council.png" class="council-logo">
+    <a href="#donate" class="donate-btn">Donate</a>
   </div>
 
 </div>
@@ -321,16 +270,8 @@ footer{
 <h1>Support 1st Sault Ste. Marie Scouts</h1>
 
 <p>
-Your donation helps local youth build leadership, outdoor skills,
-and confidence through Scouting.
+Your donation supports youth leadership, outdoor skills, and community service.
 </p>
-
-<div class="hero-buttons">
-  <a href="#donate" class="btn btn-primary">Donate Now</a>
-  <a href="https://www.myscouts.ca/ca/join" target="_blank" class="btn btn-outline">
-    Join Scouting
-  </a>
-</div>
 
 </section>
 
@@ -342,8 +283,7 @@ and confidence through Scouting.
 <div class="donation-callout">
   <h2>Make a Small Donation – Make a Big Impact</h2>
   <p>
-    Donations are processed securely through Square (link coming soon).
-    Apple Day supports badges, programs, and outdoor adventures.
+    Donations are processed securely through Square (coming soon).
   </p>
 </div>
 
@@ -352,35 +292,30 @@ and confidence through Scouting.
   <div class="donation-card">
     <div class="amt">$1</div>
     <a href="#">Donate $1</a>
-    <p>Quick & easy</p>
   </div>
 
   <div class="donation-card">
     <div class="amt">$2</div>
     <a href="#">Donate $2</a>
-    <p>Every bit helps</p>
   </div>
 
   <div class="donation-card">
     <div class="amt">$5</div>
     <a href="#">Donate $5</a>
-    <p>Great support</p>
   </div>
 
   <div class="donation-card">
     <div class="amt">Custom</div>
     <a href="#">Donate</a>
-    <p>Choose amount</p>
   </div>
 
 </div>
 
 </div>
-
 </section>
 
 <!-- SECTIONS -->
-<section class="sections">
+<section>
 
 <div class="container">
 
@@ -396,14 +331,30 @@ and confidence through Scouting.
 
 </div>
 
-<div class="join-wrap">
-  <a href="https://www.myscouts.ca/ca/join" target="_blank" class="join-btn">
-    Join Scouts Canada
-  </a>
 </div>
+</section>
+
+<!-- DYNAMIC INFO -->
+<section>
+
+<div class="container">
+
+<div class="dynamic-box">
+
+<h2>Apple Day Information</h2>
+
+<h3>📍 Locations</h3>
+<ul id="dynamic-locations"></ul>
+
+<h3>🍎 Apples Available</h3>
+<ul id="dynamic-apples"></ul>
+
+<h3>🚜 Suppliers</h3>
+<ul id="dynamic-suppliers"></ul>
 
 </div>
 
+</div>
 </section>
 
 <!-- CONTACT -->
@@ -411,63 +362,61 @@ and confidence through Scouting.
 
 <div class="container">
 
-<h2>Contact & Group Information</h2>
+<h2>Contact</h2>
 
 <div class="contact-box">
 
 <p><strong>Group Commissioner:</strong> Neil McLean</p>
 <p><strong>Email:</strong> mcmadmac@gmail.com</p>
 
-<p>
-Questions about Apple Day, volunteering, or joining Scouting?
-Send us a message below.
-</p>
-
 <form
   name="contact"
   method="POST"
   data-netlify="true"
-  netlify-honeypot="bot-field"
   class="contact-form"
 >
 
 <input type="hidden" name="form-name" value="contact">
 
-<p style="display:none;">
-  <input name="bot-field">
-</p>
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Message" required></textarea>
 
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="tel" name="phone" placeholder="Your Phone Number">
-<textarea name="message" placeholder="Your Message" required></textarea>
-
-<button type="submit">Send Message</button>
+<button type="submit">Send</button>
 
 </form>
 
 </div>
 
 </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer>
-<p>© 1st Sault Ste. Marie Scouts | Apple Day Fundraiser</p>
+<p>© 1st Sault Ste. Marie Scouts</p>
 </footer>
 
-<!-- Identity Redirect -->
+<!-- LOAD JSON DATA -->
 <script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
+
+fetch("/content/appleday.json")
+  .then(res => res.json())
+  .then(data => {
+
+    document.getElementById("dynamic-locations").innerHTML =
+      data.locations.map(l => `<li>${l}</li>`).join("");
+
+    document.getElementById("dynamic-apples").innerHTML =
+      data.apples.map(a => `<li>${a}</li>`).join("");
+
+    document.getElementById("dynamic-suppliers").innerHTML =
+      data.suppliers.map(s => `<li>${s}</li>`).join("");
+
+  })
+  .catch(err => {
+    console.error("Data load error:", err);
   });
-}
+
 </script>
 
 </body>
