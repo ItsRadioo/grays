@@ -1,7 +1,0 @@
-/admin/config.yml
-  Content-Type: text/yaml
-  Cache-Control: no-cache
-
-/*
-  Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com;
-  Access-Control-Allow-Origin: *
